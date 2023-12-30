@@ -10,6 +10,7 @@ body{
     background-color: hsl(225, 100%, 94%);
     background-image: url(/images/mobile.svg);
     background-repeat: no-repeat;
+    background-size: 100%;
     min-height: 100vh;
 }
 
@@ -111,12 +112,13 @@ img{
     body{
         display: grid;
         place-content: center;
-    }
-
-    .c-order{
         background-color: hsl(225, 100%, 94%);
         background-image: url(/images/desktop.svg);
         background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .c-order{
         max-width: 300px;
     }
 }
