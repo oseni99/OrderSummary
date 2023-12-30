@@ -8,6 +8,8 @@ body{
     font-size: 1rem;
     font-family: 'Red Hat Display', sans-serif;
     background-color: hsl(225, 100%, 94%);
+    background-image: url(/images/mobile.svg);
+    background-repeat: no-repeat;
     min-height: 100vh;
 }
 
@@ -31,12 +33,9 @@ img{
 }
 
 .c-order{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    place-content: center;
     text-align: center;
-    padding: 0.5rem;
 }
 
 .order__image{
@@ -80,12 +79,14 @@ img{
 .order__payment button{
     margin-top: 1rem;
     background-color: hsl(245, 75%, 52%);
-    width: 300px;
-    min-height: 50px;
-    border-radius: 15px;
+    min-height: 40px;
     color: white;
     box-shadow: 0px 20px 50px hsl(224, 23%, 55%);
     font-weight: bold;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    border-width: 0;
+    border-radius: 15px;
 }
 
 .order__payment button:hover{
@@ -100,4 +101,22 @@ img{
 .order__cancel:hover{
     color: black;
     opacity: 1;
+}
+
+.order__image{
+    width: 100%;
+}
+
+@media screen and (min-width:600px) {
+    body{
+        display: grid;
+        place-content: center;
+    }
+
+    .c-order{
+        background-color: hsl(225, 100%, 94%);
+        background-image: url(/images/desktop.svg);
+        background-repeat: no-repeat;
+        max-width: 300px;
+    }
 }
